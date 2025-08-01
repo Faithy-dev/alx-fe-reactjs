@@ -5,12 +5,12 @@ class VoiceService {
 
   bool _isAvailable = false;
 
-  // Initialize the microphone
+ 
   Future<void> initSpeech() async {
     _isAvailable = await _speech.initialize();
   }
 
-  // Start listening for 5 seconds and return transcribed words
+
   Future<String> listenOnce() async {
     if (!_isAvailable) await initSpeech();
 
