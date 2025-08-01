@@ -11,7 +11,7 @@ class ChatProvider with ChangeNotifier {
   bool _isLoading = false;
 
   ChatProvider(this._geminiService) {
-    _messages = _box.values.toList(); // Load previous messages
+    _messages = _box.values.toList(); 
   }
 
   List<Message> get messages => _messages;
