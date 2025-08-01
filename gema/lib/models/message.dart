@@ -10,6 +10,6 @@ class Message {
   @HiveField(1)
   final bool isUser;
 
-  // Constructor to initialize a message object
+ 
   Message({required this.text, required this.isUser});
 }
