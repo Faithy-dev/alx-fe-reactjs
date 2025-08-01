@@ -1,10 +1,10 @@
 import 'package:google_generative_ai/google_generative_ai.dart';
-import 'package:logging/logging.dart'; // <-- import logging package
+import 'package:logging/logging.dart'; 
 import '../constants.dart';
 
 class GeminiService {
   late final GenerativeModel _model;
-  final Logger _logger = Logger('GeminiService'); // <-- create logger instance
+  final Logger _logger = Logger('GeminiService'); 
 
   GeminiService() {
     _model = GenerativeModel(
@@ -19,7 +19,7 @@ class GeminiService {
       final response = await _model.generateContent([prompt]);
       return response.text;
     } catch (e, stackTrace) {
-      _logger.severe('Error from Gemini:', e, stackTrace); // <-- use logger
+      _logger.severe('Error from Gemini:', e, stackTrace); 
       return 'Sorry, something went wrong.';
     }
   }
